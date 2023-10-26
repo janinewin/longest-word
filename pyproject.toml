@@ -12,6 +12,7 @@ pylint = "^3.0.2"
 enchant = "^0.0.1"
 spellchecker = "^0.4"
 nltk = "^3.8.1"
+flask = "^3.0.0"
 
 
 [build-system]
