@@ -1,7 +1,10 @@
 # pylint: disable=missing-docstring
-
+import nltk
 import string
 import random
+
+nltk.download("words")
+from nltk.corpus import words
 
 class Game:
     def __init__(self) -> list:
@@ -23,11 +26,12 @@ class Game:
             else:
                 return False
 
-        return True
+        return word.lower() in words.words()
 
 
 if __name__ == "__main__":
     game = Game()
+    game.grid = list('KWIENFUQWT')
     print(game.grid) # --> OQUWRBAZE
-    my_word = "BAROQUE"
-    game.is_valid(my_word) # --> True
+    my_word = "TUN"
+    print(game.is_valid(my_word)) # --> True
